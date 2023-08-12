@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>王小帅的博客</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    
+    header {
+      background-color:  #66CCCC;
+      color: #ffffff;
+      padding: 15px;
+      text-align：almond;/*文字靠在*/
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    nav {
+      background-color: #eee;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    nav a {
+      text-decoration: none;
+      margin: 0 10px;
+      color: #333;
+      font-weight: bold;
+    }
+    
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .post {
+      margin-bottom: 20px;
+    }
+    
+    .post h2 {
+      margin-top: 0;
+    }
+    
+    .post p {
+      line-height: 1.5;
+    }
+    
+    .post .date {
+      color: #999;
+      font-size: 1.0em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>王小帅的博客</h1>
+  </header>
+  <head>
+    <style>
+        .centered-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+<main>
+    <div class="post">
+    <h2>使用工具apksigner为你的APK手动签名</h2>
+    <h4>1.在进行apk签名之前，你需要确保已经安装了JDK，然后安装在Android SDK，在Android SDK的根目录中，你会找到apksigner工具的路径</h4>
+    <h4>2.在进行签名之前，你需要准备好签名文件。签名文件通常由以下几个部分组成</h4>
+    <p>私钥（key）：这个文件是你用来创建数字签名的关键文件。你可以使用Java的keytool工具来生成一个私钥文件。运行以下命令来生成私钥文件：keytool -genkey -v -keystore your_keystore_name.keystore -alias your_alias_name -keyalg RSA -keysize 2048 -validity 10000。根据提示输入相关信息并设置密码。 </p>
+    <p>公钥证书（certificate）：这个文件是你的应用程序的数字证书。你可以通过运行以下命令来生成公钥证书文件：keytool -export -rfc -keystore your_keystore_name.keystore -alias your_alias_name -file your_certificate.crt。根据提示输入密码和证书文件名。 </p>
+    <h3></h3>
+    <h3>使用apksigner工具签名apk文件</h3>
+    <img src="img/a1.png" width="600" height="400">
+    <p>$ apksigner sign --ks demo.keystore test.apk</p> 
+    <p>验证签名：apksigner verify --verbose test.apk</p>
+       
+    <p class="date">发表于2023-8.3</p>
+    </div>
+
+</body>
+</html>

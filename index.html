@@ -3,7 +3,12 @@
 <head>
   <title>王小帅的博客</title>
   <style>
- body {
+    /* 添加视口元标签 */
+    @viewport {
+      width: device-width;
+      initial-scale: 1.0;
+    }
+    body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -14,8 +19,6 @@
       background-attachment: fixed;
     }
       
-
-    
     header {
       background-color: #46d5dc;
       color: #ffffff;
@@ -36,13 +39,14 @@
     nav a {
       text-decoration: none;
       margin: 15px;
-      color: #000000;
+      color: #ffffff;/*导航栏*/
       font-weight: bold;
     }
     
     main {
-      max-width: 800px;
-      margin: 20px auto;
+      max-width: 800px; /* 设置最大宽度为800px，避免在大屏幕上过宽 */
+      width: 90%; /* 设置宽度为90%，使其能够随着视口大小而缩放 */
+      margin: 20px auto; /* 设置水平居中 */
       padding: 20px;
       background-color: #ffffff71;
       border-radius: 5px;
@@ -56,7 +60,7 @@
       bottom: 0;
       text-align: center;
       padding: 20px;
-      background-color: #bbbbbb00;
+      background-color: #ca161600;
       color: #fff;
     }
     
@@ -80,38 +84,57 @@
     a {
       text-decoration: none;
     }
-  </style>
+
+    /* 添加媒体查询，当屏幕宽度小于600px时，改变一些样式 */
+    @media screen and (max-width: 600px) {
+      
+       /* 修改导航栏为横向排列 */
+       nav {
+        display: flex; 
+        flex-direction: row; /* 将column改为row */
+        align-items:center; 
+        justify-content:center; /* 添加居中对齐 */
+       }
+
+       /* 设置标题字体大小为6vw，即视口宽度的6% */
+       h1 {
+        font-size:6vw; 
+       }
+
+       /* 设置文章标题字体大小为5vw */
+       .post h2 {
+        font-size :5vw; 
+       }
+     }
+   </style>
 </head>
 <body>
-  <header>
-    <h1>王小帅的博客</h1>
-  </header>
-  
-  <nav>
-    <a href="#">主页</a>
-    <a href="my/my.html">关于</a>
-    <a href="#"></a>
-  </nav>
-  
-<Main>
+   <header>
+     <h1>王小帅的博客</h1>
+   </header>
 
-  <div class="post">
-    <h2><a  style="color:inherit;" href="1.html">启动windows时出现NU GRUB Minimal BASH-like line editing is supported该如何解决</a></h2>
-    <p>出现这个问题主要是安装双系统之后，将linux系统分区格式化导致...</p>
-    <p class="date">发表于2023-7.29</p>
-  </div>
+   <nav>
+     <a href="#">主页</a>
+     <a href="">动态</a>
+     <a href="jishu/jishu.html">技术</a>
+     <a href="my/my.html">关于</a>
+     <a href="#"></a>
+   </nav>
+
+<main>
+
+   <div class="post">
+     <h2><a style="color :inherit;" href="#">网站维护中。。</a></h2>
+     <p>优化网站</p>
+     <p class="date">发表于2023.8.13</p>
+   </div>
 
 
-  <div class="post">
-    <h2><a  style="color:inherit;" href="2.html">使用工具apksigner为你的APK手动签名</a></h2>
-    <p>在进行apk签名之前，你需要确保已经安装了JDK</p>
-    <p class="date">发表于2023-8.3</p>
-  </div
+</main>
 
-</Main>
-    
-  <footer>
-    &copy; 2023 王小帅的博客 版权所有
-  </footer>
+   <footer>
+     ©2023 王小帅的博客 版权所有
+   </footer>
 </body>
 </html>
+
