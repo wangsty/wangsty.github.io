@@ -15,7 +15,7 @@
       background-color: #f7f7f700;
       background-image: url("img/bj.jpg");
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: cover; /* 修改图片尺寸 */
       background-attachment: fixed;
     }
       
@@ -53,15 +53,15 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.389);
     }
     
-    footer {
-      position: fixed;
+    footer {/*页脚*/
+      position: fixed;/*固定底部位置*/
       left: 0;
       right: 0;
       bottom: 0;
       text-align: center;
       padding: 20px;
       background-color: #ca161600;
-      color: #fff;
+      color: #ffffff;
     }
     
     .post {
@@ -106,6 +106,7 @@
         font-size :5vw; 
        }
      }
+     
    </style>
 </head>
 <body>
@@ -115,7 +116,7 @@
 
    <nav>
      <a href="#">主页</a>
-     <a href="">动态</a>
+     <a href="dongtai/dongtai.html">动态</a>
      <a href="jishu/jishu.html">技术</a>
      <a href="my/my.html">关于</a>
      <a href="#"></a>
@@ -124,17 +125,18 @@
 <main>
 
    <div class="post">
-     <h2><a style="color :inherit;" href="#">网站维护中。。</a></h2>
-     <p>优化网站</p>
+    <h2>这是我非常喜欢的一首歌«Мимо подъездов»《穿过街巷》</h2>
+     <div style="width: 500px;height: 380px;margin: 50px;">
+      <iframe width="700px" height="380px" src="https://player.bilibili.com/player.html?aid=605409835&bvid=BV1H84y1C7uQ&cid=900598732&page=1" frameborder=0 allowfullscreen></iframe>
+  </div>
      <p class="date">发表于2023.8.13</p>
    </div>
 
-
 </main>
 
-   <footer>
-     ©2023 王小帅的博客 版权所有
-   </footer>
+<footer>
+  <p>版权所有 © 2023 王小帅的博客</p>
+</footer>
+
 </body>
 </html>
-
